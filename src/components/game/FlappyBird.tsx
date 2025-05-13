@@ -1123,24 +1123,7 @@ export const FlappyBird: React.FC<FlappyBirdProps> = ({ language, soundEnabled }
             </div>
           )}
           <div className="flex justify-center space-x-2 w-full">
-            <button
-              onClick={() => setShowShop(true)}
-              className="px-2 sm:px-3 py-1.5 sm:py-2 bg-space-accent text-white rounded-lg hover:bg-space-accent/90 transition-all duration-200 hover:scale-105 font-bold text-xs sm:text-sm w-32 sm:w-36 flex items-center justify-center space-x-1"
-            >
-              <img src="/objects/shop.png" alt="Shop" className="w-4 h-4 mr-1" />
-              <span>Shop</span>
-            </button>
-            <button
-              onClick={() => setShowBoosts(true)}
-              className="px-2 sm:px-3 py-1.5 sm:py-2 bg-space-dark/80 text-white rounded-lg hover:bg-space-dark transition-all duration-200 hover:scale-105 font-bold text-xs sm:text-sm w-32 sm:w-36 flex items-center justify-center space-x-1"
-            >
-              {activeBoost ? (
-                <img src={`/objects/${activeBoost}.png`} alt={activeBoost} className="w-4 h-4 mr-1" />
-              ) : (
-                <span className="mr-1">🚫</span>
-              )}
-              <span className="truncate max-w-[60px]">{activeBoost ? `${activeBoost.charAt(0).toUpperCase() + activeBoost.slice(1)} Boost` : 'No Boost'}</span>
-            </button>
+            
           </div>
 
           {/* SHOP POPUP */}
