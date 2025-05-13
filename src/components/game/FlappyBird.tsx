@@ -306,7 +306,7 @@ export const FlappyBird: React.FC<FlappyBirdProps> = ({ language, soundEnabled }
       const promises = [
         new Promise((resolve) => {
           birdImg.onload = resolve;
-          birdImg.src = "https://i.imgur.com/Rwb5dgU.png";
+          birdImg.src = "https://videos.openai.com/vg-assets/assets%2Ftask_01jv5cc21xevj936gmtcnvvr5n%2F1747158784_img_1.webp?st=2025-05-13T16%3A50%3A33Z&se=2025-05-19T17%3A50%3A33Z&sks=b&skt=2025-05-13T16%3A50%3A33Z&ske=2025-05-19T17%3A50%3A33Z&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skoid=aa5ddad1-c91a-4f0a-9aca-e20682cc8969&skv=2019-02-02&sv=2018-11-09&sr=b&sp=r&spr=https%2Chttp&sig=%2B97CwYULjQkaiOOOloss58mEyKEuQ741%2FkfjGZim1Jc%3D&az=oaivgprodscus";
         }),
         new Promise((resolve) => {
           pipeImg.onload = resolve;
