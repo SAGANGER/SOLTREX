@@ -347,7 +347,6 @@ export const FlappyBird: React.FC<FlappyBirdProps> = ({ language, soundEnabled }
     const loadSounds = () => {
       jumpSoundRef.current = new Audio('/sounds/jump.mp3');
       scoreSoundRef.current = new Audio('/sounds/score.mp3');
-      deathSoundRef.current = new Audio('/sounds/death.mp3');
       boostSoundRef.current = new Audio('/sounds/boost.mp3');
 
       // Préchargement des sons
