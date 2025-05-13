@@ -25,8 +25,8 @@ interface FlappyBirdProps {
 
 // Configuration flexible des biomes
 const BIOMES = [
-  { name: 'winter', minScore: 0, image: '/backgrounds/mountain.png' },
-  { name: 'spring', minScore: 2, image: '/backgrounds/spring.png' },
+  { name: 'winter', minScore: 0, image: 'https://i.imgur.com/XnN2iVt.png' },
+  { name: 'spring', minScore: 2, image: 'https://i.imgur.com/XnN2iVt.png' },
   { name: 'summer', minScore: 4, image: '/backgrounds/summer.png' },
   { name: 'newyork', minScore: 6, image: '/backgrounds/newyork.png' },
   { name: 'yellowstone', minScore: 8, image: '/backgrounds/yellowstone.png' },
