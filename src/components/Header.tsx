@@ -32,7 +32,7 @@ export const Header: React.FC<HeaderProps> = ({ profile, onOpenAffiliation }) =>
     <header className="w-full py-6 px-4 md:px-8 flex justify-between items-center animate-fade-in">
       <div className="flex items-center space-x-3 text-space-text-light">
         <img 
-          src="https://upload.wikimedia.org/wikipedia/en/b/b9/Solana_logo.png" 
+          src="https://i.imgur.com/0hUbkK2.png" 
           alt="Solana Logo" 
           className="h-8 w-8"
         />
@@ -40,7 +40,7 @@ export const Header: React.FC<HeaderProps> = ({ profile, onOpenAffiliation }) =>
           onClick={() => navigate('/')}
           className="text-xl font-bold hover:text-space-accent transition-colors"
         >
-          SolT-rex
+          Blimpy
         </button>
       </div>
       
