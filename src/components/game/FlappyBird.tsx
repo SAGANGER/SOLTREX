@@ -1062,8 +1062,8 @@ export const FlappyBird: React.FC<FlappyBirdProps> = ({ language, soundEnabled }
           
           <div className="grid grid-cols-4 gap-2 sm:gap-4 mb-3 sm:mb-4">
             <div className="bg-space-dark/80 p-2 sm:p-4 rounded-xl border border-space-accent/20 transform hover:scale-105 transition-all duration-200">
-              <p className="text-space-text/80 text-xs mb-1">{translations[language].lastScore}</p>
-              <p className="text-lg sm:text-xl font-bold text-space-text-light">{gameState.lastScore}</p>
+              <p className="text-black text-xs mb-1">{translations[language].lastScore}</p>
+<p className="text-lg sm:text-xl font-bold text-black">{gameState.lastScore}</p>
             </div>
             <div className="bg-space-dark/80 p-2 sm:p-4 rounded-xl border border-space-accent/20 transform hover:scale-105 transition-all duration-200">
               <p className="text-space-text/80 text-xs mb-1">{translations[language].highScore}</p>
