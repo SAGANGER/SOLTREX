@@ -36,7 +36,7 @@ type BiomeName = 'winter' | 'spring' | 'summer' | 'newyork' | 'yellowstone';
 
 // Nouvelle liste de tâches variées
 const TASKS = [
-  { id: 1, type: 'score', goal: 10, label: 'Score de 10', xp: 100 },
+  { id: 1, type: 'score', goal: 10, label: 'Score 10', xp: 100 },
   { id: 2, type: 'time', goal: 30, label: 'Play 30 seconds', xp: 100 },
   { id: 3, type: 'jump', goal: 10, label: 'Jump 10 times', xp: 100 },
   { id: 4, type: 'jump', goal: 20, label: 'Jump 20 times', xp: 100 },
