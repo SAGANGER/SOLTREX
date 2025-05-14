@@ -8,8 +8,8 @@ export default {
         'space-light': '#141414',
         'space-accent': '#1f687a',
         'space-accent-light': '#1e4b85',
-        'space-text': '#1f687a',
-        'space-text-light': '#1f687a',
+        'space-text': '#000000',
+        'space-text-light': '#000000',
       },
 
       animation: {
