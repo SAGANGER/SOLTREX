@@ -42,7 +42,7 @@ export default {
         },
       },
       backgroundImage: {
-        'space-gradient': 'linear-gradient(to bottom, #0A0A0A, #141414)',
+        'space-gradient': 'linear-gradient(135deg, #1e3a8a 0%, #22c55e 50%, #60a5fa 100%)',
       },
     },
   },
