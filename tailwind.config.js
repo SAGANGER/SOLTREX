@@ -3,14 +3,14 @@ export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
-      colors: {
-  'space-dark': '#1F2937',            // Gris foncé
-  'space-light': '#F1F5F9',           // Gris clair / blanc cassé
-  'space-accent': '#10B981',          // Vert principal
-  'space-accent-light': '#34D399',    // Vert clair
-  'space-text': '#1E3A8A',            // Bleu foncé
-  'space-text-light': '#93C5FD',      // Bleu clair
-},
+     colors: {
+        'space-dark': '#0A0A0A',
+        'space-light': '#141414',
+        'space-accent': '#9945FF',
+        'space-accent-light': '#B980FF',
+        'space-text': '#E2E8F0',
+        'space-text-light': '#F8FAFC',
+      },
 
       animation: {
         'fade-in': 'fadeIn 0.8s ease-out forwards',
