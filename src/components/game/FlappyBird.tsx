@@ -56,6 +56,38 @@ const TASKS = [
   { id: 18, type: 'jump', goal: 100, label: 'Jump 100 times', xp: 200 },
   { id: 19, type: 'time', goal: 180, label: 'Play 3 minutes', xp: 200 },
   { id: 20, type: 'level', goal: 5, label: 'Reach level 5', xp: 200 },
+  { id: 21, type: 'score', goal: 100, label: 'Score 100', xp: 100 },
+  { id: 22, type: 'jump', goal: 120, label: 'Jump 120 times', xp: 100 },
+  { id: 23, type: 'time', goal: 180, label: 'Play 3 minutes', xp: 100 },
+  { id: 24, type: 'score', goal: 130, label: 'Score 130', xp: 100 },
+  { id: 25, type: 'jump', goal: 150, label: 'Jump 150 times', xp: 100 },
+  { id: 26, type: 'time', goal: 240, label: 'Play 4 minutes', xp: 100 },
+  { id: 27, type: 'score', goal: 160, label: 'Score 160', xp: 100 },
+  { id: 28, type: 'jump', goal: 180, label: 'Jump 180 times', xp: 100 },
+  { id: 29, type: 'score', goal: 180, label: 'Score 180', xp: 100 },
+  { id: 30, type: 'time', goal: 300, label: 'Play 5 minutes', xp: 100 },
+
+  { id: 31, type: 'score', goal: 200, label: 'Score 200', xp: 90 },
+  { id: 32, type: 'jump', goal: 220, label: 'Jump 220 times', xp: 90 },
+  { id: 33, type: 'time', goal: 360, label: 'Play 6 minutes', xp: 90 },
+  { id: 34, type: 'score', goal: 230, label: 'Score 230', xp: 90 },
+  { id: 35, type: 'jump', goal: 250, label: 'Jump 250 times', xp: 90 },
+  { id: 36, type: 'time', goal: 420, label: 'Play 7 minutes', xp: 90 },
+  { id: 37, type: 'score', goal: 260, label: 'Score 260', xp: 90 },
+  { id: 38, type: 'jump', goal: 280, label: 'Jump 280 times', xp: 90 },
+  { id: 39, type: 'score', goal: 280, label: 'Score 280', xp: 90 },
+  { id: 40, type: 'time', goal: 480, label: 'Play 8 minutes', xp: 90 },
+
+  { id: 41, type: 'score', goal: 300, label: 'Score 300', xp: 80 },
+  { id: 42, type: 'jump', goal: 320, label: 'Jump 320 times', xp: 80 },
+  { id: 43, type: 'time', goal: 540, label: 'Play 9 minutes', xp: 80 },
+  { id: 44, type: 'score', goal: 330, label: 'Score 330', xp: 80 },
+  { id: 45, type: 'jump', goal: 350, label: 'Jump 350 times', xp: 80 },
+  { id: 46, type: 'time', goal: 600, label: 'Play 10 minutes', xp: 80 },
+  { id: 47, type: 'score', goal: 360, label: 'Score 360', xp: 80 },
+  { id: 48, type: 'jump', goal: 380, label: 'Jump 380 times', xp: 80 },
+  { id: 49, type: 'score', goal: 380, label: 'Score 380', xp: 80 },
+  { id: 50, type: 'time', goal: 660, label: 'Play 11 minutes', xp: 80 }
 ];
 
 export const FlappyBird: React.FC<FlappyBirdProps> = ({ language, soundEnabled }) => {
