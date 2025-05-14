@@ -34,7 +34,7 @@ export const Header: React.FC<HeaderProps> = ({ profile, onOpenAffiliation }) =>
         <img 
           src="https://i.imgur.com/0hUbkK2.png" 
           alt="Solana Logo" 
-          className="h-8 w-8"
+          className="h-10 w-10" 
         />
         <button
           onClick={() => navigate('/')}
