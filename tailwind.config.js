@@ -6,10 +6,10 @@ export default {
      colors: {
         'space-dark': '#0A0A0A',
         'space-light': '#141414',
-        'space-accent': '#9945FF',
-        'space-accent-light': '#B980FF',
-        'space-text': '#E2E8F0',
-        'space-text-light': '#F8FAFC',
+        'space-accent': '#1f687a',
+        'space-accent-light': '#1e4b85',
+        'space-text': '#30bf81',
+        'space-text-light': '#21bf5d',
       },
 
       animation: {
