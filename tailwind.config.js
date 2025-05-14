@@ -11,7 +11,10 @@ export default {
         'space-text': '#2739f6',
         'space-text-light': '#2739f6',
       },
-
+fontFamily: {
+        sans: ['"Baloo 2"', 'sans-serif'],
+        mono: ['"Baloo 2"', 'monospace'],
+      },
       animation: {
         'fade-in': 'fadeIn 0.8s ease-out forwards',
         'slide-up': 'slideUp 0.5s ease-out forwards',
