@@ -1057,10 +1057,6 @@ export const FlappyBird: React.FC<FlappyBirdProps> = ({ language, soundEnabled }
               <p className="text-space-text/80 text-xs mb-1">{translations[language].highScore}</p>
               <p className="text-lg sm:text-xl font-bold text-space-accent">{gameState.highScore}</p>
             </div>
-            <div className="bg-space-dark/80 p-2 sm:p-4 rounded-xl border border-space-accent/20 flex items-center justify-center transform hover:scale-105 transition-all duration-200">
-              <img src="/objects/coin.png" alt="coin" className="w-5 h-5 mr-1 inline-block align-middle" />
-              <span className="text-lg sm:text-xl font-bold text-yellow-400 align-middle">{gameState.coins}</span>
-            </div>
             <div className="bg-space-dark/80 p-2 sm:p-4 rounded-xl border border-space-accent/20 transform hover:scale-105 transition-all duration-200">
               <p className="text-space-text/80 text-xs mb-1">My Rank</p>
               <p className="text-lg sm:text-xl font-bold text-space-text-light">
