@@ -45,7 +45,7 @@ fontFamily: {
         },
       },
       backgroundImage: {
-        'space-gradient': 'linear-gradient(135deg, #1e3a8a 0%, #22c55e 50%, #60a5fa 100%)',
+        'space-gradient':  "url('https://i.imgur.com/AkQRckz.png')",
       },
     },
   },
