@@ -1064,7 +1064,7 @@ export const FlappyBird: React.FC<FlappyBirdProps> = ({ language, soundEnabled }
               </p>
             </div>
           </div>
-</div>
+</div></div>
 
 
           <div className="relative w-16 sm:w-24 h-16 sm:h-24 mx-auto mb-4 sm:mb-8">
