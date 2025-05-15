@@ -138,13 +138,14 @@ export const Dashboard: React.FC = () => {
                 </button>
               </div>
               
-              <button
+             <button
   onClick={() => setIsAffiliationOpen(true)}
-  className="flex items-center space-x-1 sm:space-x-2 py-1.5 sm:py-2 px-2 sm:px-4 rounded-lg text-black hover:text-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-space-accent transition-all duration-200"
+  className="flex items-center space-x-1 sm:space-x-2 py-1.5 sm:py-2 px-2 sm:px-4 rounded-lg text-black bg-white hover:bg-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-space-accent transition-all duration-200"
 >
   <Users className="h-4 w-4 sm:h-5 sm:w-5 text-black" />
   <span className="hidden sm:inline text-black">Open Affiliation Program</span>
 </button>
+
 
 
               <button
