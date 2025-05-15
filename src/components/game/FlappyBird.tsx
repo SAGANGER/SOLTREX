@@ -1271,25 +1271,25 @@ export const FlappyBird: React.FC<FlappyBirdProps> = ({ language, soundEnabled }
 
       {showDeathScreen && (
         <div className="absolute inset-0 flex items-center justify-center bg-black/50 backdrop-blur-sm rounded-xl opacity-0 animate-fade-in">
-          <div className="bg-space-light/90 p-4 sm:p-8 rounded-lg border border-space-accent/20 text-center transform scale-95 animate-scale-in">
-            <h3 className="text-xl sm:text-2xl font-bold text-space-text-light mb-2 sm:mb-4">{translations[language].gameOver}</h3>
-            <p className="text-sm sm:text-base text-space-text mb-4 sm:mb-6">{translations[language].highScore}: {gameState.highScore}</p>
-            <div className="flex space-x-2 sm:space-x-4">
-              <button
-                onClick={startGame}
-                className="px-3 sm:px-6 py-2 sm:py-3 bg-space-accent text-white rounded-lg hover:bg-space-accent/90 transition-all duration-200 hover:scale-105 text-sm sm:text-base"
-              >
-                {translations[language].playAgain}
-              </button>
-              <button
-                onClick={() => {
-                  setGameState(prev => ({ ...prev, isPlaying: false }));
-                  setShowDeathScreen(false);
-                }}
-                className="px-3 sm:px-6 py-2 sm:px-3 bg-space-dark text-space-text-light rounded-lg hover:bg-space-dark/80 transition-all duration-200 hover:scale-105 text-sm sm:text-base"
-              >
-                {translations[language].home}
-              </button>
+    <div className="bg-space-light/90 p-4 sm:p-8 rounded-lg border border-space-accent/20 text-center transform scale-95 animate-scale-in flex flex-col items-center">
+      <h3 className="text-xl sm:text-2xl font-bold text-space-text-light mb-2 sm:mb-4">{translations[language].gameOver}</h3>
+      <p className="text-sm sm:text-base text-space-text mb-4 sm:mb-6">{translations[language].highScore}: {gameState.highScore}</p>
+      <div className="flex space-x-2 sm:space-x-4">
+        <button
+          onClick={startGame}
+          className="px-3 sm:px-6 py-2 sm:py-3 bg-space-accent text-white rounded-lg hover:bg-space-accent/90 transition-all duration-200 hover:scale-105 text-sm sm:text-base"
+        >
+          {translations[language].playAgain}
+        </button>
+        <button
+          onClick={() => {
+            setGameState(prev => ({ ...prev, isPlaying: false }));
+            setShowDeathScreen(false);
+          }}
+          className="px-3 sm:px-6 py-2 sm:px-3 bg-space-dark text-space-text-light rounded-lg hover:bg-space-dark/80 transition-all duration-200 hover:scale-105 text-sm sm:text-base"
+        >
+          {translations[language].home}
+        </button>
             </div>
           </div>
         </div>
