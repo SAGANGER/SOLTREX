@@ -127,7 +127,7 @@ export const WalletConnect: React.FC = () => {
           
           <button
             onClick={openWalletModal}
-            className="wallet-button wallet-button-disconnected w-full animate-float"
+            className="wallet-button wallet-button-disconnected w-full animate-float text-black"
           >
             Connect Wallet
           </button>
