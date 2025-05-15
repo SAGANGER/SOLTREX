@@ -862,19 +862,7 @@ export const FlappyBird: React.FC<FlappyBirdProps> = ({ language, soundEnabled }
         });
       }
 
-      // Ajoute le compteur de coins en haut à gauche du canvas (après le rendu du score)
-      ctx.save();
-      ctx.globalAlpha = 0.95;
-      ctx.fillStyle = '#222';
-      ctx.fillRect(10, 10, 70, 32);
-      const coinImgCounter = new window.Image();
-      coinImgCounter.src = '/objects/coin.png';
-      ctx.drawImage(coinImgCounter, 16, 16, 20, 20);
-      ctx.font = 'bold 18px Arial';
-      ctx.fillStyle = '#FFD700';
-      ctx.textAlign = 'left';
-      ctx.fillText(`x ${sessionCoins}`, 40, 32);
-      ctx.restore();
+      
 
       // Affiche le nom du biome courant juste en dessous de la balance des coins avec transition d'opacité
       ctx.save();
