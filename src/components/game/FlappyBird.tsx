@@ -342,7 +342,7 @@ export const FlappyBird: React.FC<FlappyBirdProps> = ({ language, soundEnabled }
         }),
         new Promise((resolve) => {
           pipeImg.onload = resolve;
-          pipeImg.src = "https://www.wikidebrouillard.org/images/b/b3/Cr_er_le_jeu_Flappy_Bird_sur_Scratch_Tuyau.png";
+          pipeImg.src = "https://i.imgur.com/rgPjYS0.png";
         })
       ];
 
