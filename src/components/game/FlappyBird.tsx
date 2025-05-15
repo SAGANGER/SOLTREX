@@ -1236,10 +1236,11 @@ export const FlappyBird: React.FC<FlappyBirdProps> = ({ language, soundEnabled }
           <div className="flex justify-center space-x-3 sm:space-x-4 mt-2">
             <button
   onClick={startGame}
-  className="px-3 sm:px-6 py-2 sm:py-2.5 text-black rounded-xl hover:bg-gray-100 transition-all duration-200 hover:scale-105 font-bold text-xs sm:text-base w-32 sm:w-36"
+  className="px-3 sm:px-6 py-2 sm:py-2.5 bg-white text-black rounded-xl hover:bg-gray-100 transition-all duration-200 hover:scale-105 font-bold text-xs sm:text-base w-32 sm:w-36"
 >
   {translations[language].play}
 </button>
+
 
 
             <button
