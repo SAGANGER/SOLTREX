@@ -1121,7 +1121,7 @@ export const FlappyBird: React.FC<FlappyBirdProps> = ({ language, soundEnabled }
           {showTasks && (
             <div className="fixed inset-0 flex items-center justify-center z-50 bg-black/60">
               <div className="bg-space-light p-4 rounded-xl shadow-xl w-full max-w-xs border border-space-accent/20">
-                <h2 className="text-lg font-bold mb-4 text-space-accent text-center tracking-wide">Tasks</h2>
+                <h2 className="text-lg font-bold mb-4 text-black text-center tracking-wide">Tasks</h2>
                 <div className="space-y-3">
                   {activeTasks.map(id => {
                     const task = TASKS.find(t => t.id === id);
