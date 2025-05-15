@@ -1084,7 +1084,10 @@ export const FlappyBird: React.FC<FlappyBirdProps> = ({ language, soundEnabled }
 
         <div className="flex flex-col space-y-3 sm:space-y-4 w-full">
           <div className="flex items-center w-full mb-2">
-            <span className="flex items-center justify-center w-7 h-7 rounded-full bg-space-accent text-white text-xs font-bold mr-2 shadow-md select-none">{userLevel}</span>
+            <span className="flex items-center justify-center w-7 h-7 rounded-full bg-white text-black text-xs font-bold mr-2 shadow-md select-none">
+  {userLevel}
+</span>
+
             <div className="relative flex-1 h-4 bg-space-dark rounded-full overflow-hidden mx-2">
               <div
                 className="absolute left-0 top-0 h-4 bg-space-accent transition-all duration-300"
