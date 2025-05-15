@@ -318,7 +318,7 @@ export const FlappyBird: React.FC<FlappyBirdProps> = ({ language, soundEnabled }
 
   useEffect(() => {
     if (gameState.isPlaying) return;
-
+    
     const animateBird = () => {
       setBirdPreviewY(prev => {
         const newY = prev + Math.sin(Date.now() / 500) * 0.5;
@@ -334,7 +334,7 @@ export const FlappyBird: React.FC<FlappyBirdProps> = ({ language, soundEnabled }
     const loadImages = () => {
       const birdImg = new Image();
       const pipeImg = new Image();
-
+      
       const promises = [
         new Promise((resolve) => {
           birdImg.onload = resolve;
@@ -359,7 +359,7 @@ export const FlappyBird: React.FC<FlappyBirdProps> = ({ language, soundEnabled }
   useEffect(() => {
     const loadHighScore = async () => {
       if (!publicKey) return;
-
+      
       try {
         const dbHighScore = await getHighScore(publicKey.toString());
         setGameState(prev => ({
@@ -420,7 +420,7 @@ export const FlappyBird: React.FC<FlappyBirdProps> = ({ language, soundEnabled }
       }
       try {
         console.log('Fetching rank for wallet:', publicKey.toString());
-
+        
         const { data: allScores, error: scoresError } = await supabase
           .from('high_scores')
           .select('wallet_address, score')
@@ -433,7 +433,7 @@ export const FlappyBird: React.FC<FlappyBirdProps> = ({ language, soundEnabled }
         );
 
         const rank = userIndex !== -1 ? userIndex + 1 : null;
-
+        
         // Si on est en jeu et qu'on a un rang initial, calculer le gain de places
         if (gameState.isPlaying && gameState.initialRank !== null && rank !== null) {
           const gain = gameState.initialRank - rank;
@@ -445,7 +445,7 @@ export const FlappyBird: React.FC<FlappyBirdProps> = ({ language, soundEnabled }
             setGameState(prev => ({ ...prev, rankGain: gain }));
           }
         }
-
+        
         setUserRank(rank);
       } catch (error) {
         console.error('Error fetching user rank:', error);
@@ -625,7 +625,7 @@ export const FlappyBird: React.FC<FlappyBirdProps> = ({ language, soundEnabled }
       // Calcul des FPS
       const currentTime = performance.now();
       frameCountRef.current++;
-
+      
       if (currentTime - lastTimeRef.current >= 1000) {
         setFps(Math.round((frameCountRef.current * 1000) / (currentTime - lastTimeRef.current)));
         frameCountRef.current = 0;
@@ -636,7 +636,7 @@ export const FlappyBird: React.FC<FlappyBirdProps> = ({ language, soundEnabled }
       setGameObjects(prev => {
         const newBirdY = prev.birdY + prev.birdVelocity;
         const newVelocity = prev.birdVelocity + 0.4;
-
+        
         let newPipes = [...prev.pipes];
         if (newPipes.length === 0 || newPipes[newPipes.length - 1].x < PIPE_SPAWN_DISTANCE) {
           newPipes.push({ x: canvasSize.width, height: Math.random() * (canvasSize.height - PIPE_GAP - 100) + 50 });
@@ -655,14 +655,14 @@ export const FlappyBird: React.FC<FlappyBirdProps> = ({ language, soundEnabled }
           if (pipe.x + PIPE_WIDTH < 100 && pipe.x + PIPE_WIDTH > 97) {
             scoreRef.current += 1;
             const newScore = scoreRef.current;
-
+            
             if (newScore > gameState.highScore && !hasBeatenHighScore) {
               playScoreSound();
               setShowHighScoreEffect(true);
               highScoreEffectRef.current = Date.now();
               setHasBeatenHighScore(true);
             }
-
+            
             setGameState(prev => ({ ...prev, score: newScore }));
           }
         });
@@ -673,7 +673,7 @@ export const FlappyBird: React.FC<FlappyBirdProps> = ({ language, soundEnabled }
           setShowDeathScreen(true);
           setGameState(prev => {
             const newHighScore = Math.max(prev.highScore, finalScore);
-
+            
             if (publicKey && finalScore > prev.highScore) {
               updateHighScore(publicKey.toString(), finalScore)
                 .catch(error => console.error('Error updating high score:', error));
@@ -776,7 +776,7 @@ export const FlappyBird: React.FC<FlappyBirdProps> = ({ language, soundEnabled }
       ctx.font = '16px Arial';
       ctx.textAlign = 'right';
       ctx.fillText(`FPS: ${fps}`, canvas.width - 10, 20);
-
+      
       if (birdImageRef.current) {
         ctx.drawImage(birdImageRef.current, 100, gameObjects.birdY, BIRD_SIZE, BIRD_SIZE);
       }
@@ -800,14 +800,14 @@ export const FlappyBird: React.FC<FlappyBirdProps> = ({ language, soundEnabled }
           ctx.font = `${Math.min(32, canvasSize.width * 0.053)}px Arial`;
           ctx.textAlign = 'center';
           ctx.fillText(`${scoreRef.current}`, 0, 0);
-
+          
           // Afficher le gain de places si disponible
           if (gameState.rankGain !== null) {
             ctx.fillStyle = '#00FF00';
             ctx.font = `${Math.min(24, canvasSize.width * 0.04)}px Arial`;
             ctx.fillText(`+${gameState.rankGain}`, 40, 0);
           }
-
+          
           ctx.restore();
         } else {
           setShowHighScoreEffect(false);
@@ -862,7 +862,7 @@ export const FlappyBird: React.FC<FlappyBirdProps> = ({ language, soundEnabled }
         });
       }
 
-
+      
 
       // Affiche le nom du biome courant juste en dessous de la balance des coins avec transition d'opacité
       ctx.save();
@@ -1044,26 +1044,26 @@ export const FlappyBird: React.FC<FlappyBirdProps> = ({ language, soundEnabled }
 
   if (!gameState.isPlaying && !showDeathScreen) {
     return (
-      
-         <div className="flex items-center justify-center h-screen">
-  <div className="grid grid-cols-4 gap-2 sm:gap-4 mb-3 sm:mb-4">
-    <div className="bg-space-dark/80 p-2 sm:p-4 rounded-xl border border-space-accent/20 transform hover:scale-105 transition-all duration-200">
-      <p className="text-white text-xs mb-1">{translations[language].lastScore}</p>
-      <p className="text-lg sm:text-xl font-bold text-white">{gameState.lastScore}</p>
-    </div>
-    <div className="bg-space-dark/80 p-2 sm:p-4 rounded-xl border border-space-accent/20 transform hover:scale-105 transition-all duration-200">
-      <p className="text-space-text/80 text-xs mb-1">{translations[language].highScore}</p>
-      <p className="text-lg sm:text-xl font-bold text-space-accent">{gameState.highScore}</p>
-    </div>
-    <div className="bg-space-dark/80 p-2 sm:p-4 rounded-xl border border-space-accent/20 transform hover:scale-105 transition-all duration-200">
-      <p className="text-space-text/80 text-xs mb-1">My Rank</p>
-      <p className="text-lg sm:text-xl font-bold text-space-text-light">
-        {userRank ? `#${userRank}` : '-'}
-      </p>
-    </div>
-  </div>
-</div>
-
+      <div className="flex flex-col items-center space-y-4 sm:space-y-6 p-4 sm:p-6 bg-space-light/40 rounded-xl backdrop-blur-xl border border-space-accent/10 w-full max-w-md mx-auto mt-[-2rem] transition-all duration-300 hover:border-space-accent/30 hover:backdrop-blur-lg hover:shadow-[0_0_15px_-3px_rgba(153,69,255,0.3)]">
+        <div className="text-center w-full">
+          <h2 style={{ color: 'white' }} className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">Flappy Blimpy</h2>
+          
+          <div className="grid grid-cols-4 gap-2 sm:gap-4 mb-3 sm:mb-4">
+            <div className="bg-space-dark/80 p-2 sm:p-4 rounded-xl border border-space-accent/20 transform hover:scale-105 transition-all duration-200">
+              <p className="text-white text-xs mb-1">{translations[language].lastScore}</p>
+<p className="text-lg sm:text-xl font-bold text-white">{gameState.lastScore}</p>
+            </div>
+            <div className="bg-space-dark/80 p-2 sm:p-4 rounded-xl border border-space-accent/20 transform hover:scale-105 transition-all duration-200">
+              <p className="text-space-text/80 text-xs mb-1">{translations[language].highScore}</p>
+              <p className="text-lg sm:text-xl font-bold text-space-accent">{gameState.highScore}</p>
+            </div>
+            <div className="bg-space-dark/80 p-2 sm:p-4 rounded-xl border border-space-accent/20 transform hover:scale-105 transition-all duration-200">
+              <p className="text-space-text/80 text-xs mb-1">My Rank</p>
+              <p className="text-lg sm:text-xl font-bold text-space-text-light">
+                {userRank ? `#${userRank}` : '-'}
+              </p>
+            </div>
+          </div>
 
           <div className="relative w-16 sm:w-24 h-16 sm:h-24 mx-auto mb-4 sm:mb-8">
             {birdImageRef.current && (
@@ -1143,7 +1143,7 @@ export const FlappyBird: React.FC<FlappyBirdProps> = ({ language, soundEnabled }
             </div>
           )}
           <div className="flex justify-center space-x-2 w-full">
-
+            
           </div>
 
           {/* SHOP POPUP */}
