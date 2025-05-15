@@ -1058,7 +1058,7 @@ export const FlappyBird: React.FC<FlappyBirdProps> = ({ language, soundEnabled }
     return (
       <div className="flex flex-col items-center space-y-4 sm:space-y-6 p-4 sm:p-6 bg-space-light/40 rounded-xl backdrop-blur-xl border border-space-accent/10 w-full max-w-md mx-auto mt-[-2rem] transition-all duration-300 hover:border-space-accent/30 hover:backdrop-blur-lg hover:shadow-[0_0_15px_-3px_rgba(153,69,255,0.3)]">
         <div className="text-center w-full">
-          <h2 style={{ color: 'black' }} className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">Flappy Bird</h2>
+          <h2 style={{ color: 'black' }} className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">Flappy Blimpy</h2>
           
           <div className="grid grid-cols-4 gap-2 sm:gap-4 mb-3 sm:mb-4">
             <div className="bg-space-dark/80 p-2 sm:p-4 rounded-xl border border-space-accent/20 transform hover:scale-105 transition-all duration-200">
@@ -1144,7 +1144,7 @@ export const FlappyBird: React.FC<FlappyBirdProps> = ({ language, soundEnabled }
                           {done && !collected && (
                             <button className="mt-1 px-2 py-0.5 rounded bg-space-accent text-white text-[10px] font-bold hover:bg-space-accent-light transition" onClick={() => handleCollect(id)}>Collect</button>
                           )}
-                          {done && collected && <span className="text-green-400 text-[10px] mt-0.5">Terminé !</span>}
+                          {done && collected && <span className="text-green-400 text-[10px] mt-0.5">Done !</span>}
                         </div>
                       </div>
                     );
