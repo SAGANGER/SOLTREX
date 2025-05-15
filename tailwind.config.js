@@ -4,12 +4,12 @@ export default {
   theme: {
     extend: {
      colors: {
-        'space-dark': '#0A0A0A',
-        'space-light': '#141414',
-        'space-accent': '#1f687a',
-        'space-accent-light': '#1e4b85',
-        'space-text': '#1e3d87',
-        'space-text-light': '#1e3d87',
+        'space-dark': '#ffffff',
+        'space-light': '#ffffff',
+        'space-accent': '#ffffff',
+        'space-accent-light': '#ffffff',
+        'space-text': '#ffffff',
+        'space-text-light': '#ffffff',
       },
 fontFamily: {
         sans: ['"Baloo 2"', 'sans-serif'],
