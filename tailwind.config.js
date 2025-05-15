@@ -4,8 +4,8 @@ export default {
   theme: {
     extend: {
      colors: {
-        'space-dark': '#ffffff',
-        'space-light': '#ffffff',
+        'space-dark': '#000000',
+        'space-light': '#000000',
         'space-accent': '#ffffff',
         'space-accent-light': '#ffffff',
         'space-text': '#ffffff',
