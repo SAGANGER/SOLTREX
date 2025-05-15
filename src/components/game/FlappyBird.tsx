@@ -1282,11 +1282,12 @@ export const FlappyBird: React.FC<FlappyBirdProps> = ({ language, soundEnabled }
       <p className="text-sm sm:text-base text-space-text mb-4 sm:mb-6">{translations[language].highScore}: {gameState.highScore}</p>
       <div className="flex space-x-2 sm:space-x-4">
         <button
-          onClick={startGame}
-          className="px-3 sm:px-6 py-2 sm:py-3 bg-space-accent text-white rounded-lg hover:bg-space-accent/90 transition-all duration-200 hover:scale-105 text-sm sm:text-base"
-        >
-          {translations[language].playAgain}
-        </button>
+  onClick={startGame}
+  className="px-3 sm:px-6 py-2 sm:py-3 bg-white text-black rounded-lg hover:bg-gray-100 transition-all duration-200 hover:scale-105 text-sm sm:text-base"
+>
+  {translations[language].playAgain}
+</button>
+
         <button
           onClick={() => {
             setGameState(prev => ({ ...prev, isPlaying: false }));
