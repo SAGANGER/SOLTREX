@@ -1096,11 +1096,12 @@ export const FlappyBird: React.FC<FlappyBirdProps> = ({ language, soundEnabled }
             </div>
             <span className="flex items-center justify-center w-7 h-7 rounded-full bg-space-accent text-white text-xs font-bold ml-2 shadow-md select-none">{userLevel + 1}</span>
             <button
-              className="ml-4 px-3 py-1 rounded bg-space-accent text-white text-xs font-bold hover:bg-space-accent-light transition"
-              onClick={() => setShowTasks(true)}
-            >
-              View Tasks
-            </button>
+  className="ml-4 px-3 py-1 rounded bg-white text-black text-xs font-bold hover:bg-gray-100 transition"
+  onClick={() => setShowTasks(true)}
+>
+  View Tasks
+</button>
+
           </div>
           {showTasks && (
             <div className="fixed inset-0 flex items-center justify-center z-50 bg-black/60">
