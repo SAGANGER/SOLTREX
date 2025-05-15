@@ -342,7 +342,7 @@ export const FlappyBird: React.FC<FlappyBirdProps> = ({ language, soundEnabled }
         }),
         new Promise((resolve) => {
           pipeImg.onload = resolve;
-          pipeImg.src = "https://i.imgur.com/rgPjYS0.png";
+          pipeImg.src = "https://i.imgur.com/5EezMeS.png";
         })
       ];
 
