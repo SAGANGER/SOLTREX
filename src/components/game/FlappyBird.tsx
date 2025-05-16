@@ -854,7 +854,7 @@ export const FlappyBird: React.FC<FlappyBirdProps> = ({ language, soundEnabled }
       // Dessiner les coins
       if (imagesLoaded) {
         const coinImg = new window.Image();
-        coinImg.src = '/objects/coin.png';
+        coinImg.src = 'https://i.imgur.com/M0rthMS.png';
         gameObjects.coins.forEach(coin => {
           if (!coin.collected) {
             ctx.drawImage(coinImg, coin.x, coin.y, 30, 30);
