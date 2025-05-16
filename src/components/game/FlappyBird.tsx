@@ -25,11 +25,11 @@ interface FlappyBirdProps {
 
 // Configuration flexible des biomes
 const BIOMES = [
-  { name: 'heaven', minScore: 0, image: 'https://i.imgur.com/XnN2iVt.png' },
-  { name: 'heaven', minScore: 2, image: 'https://i.imgur.com/XnN2iVt.png' },
-  { name: 'heaven', minScore: 4, image: 'https://i.imgur.com/XnN2iVt.png' },
-  { name: 'heaven', minScore: 6, image: 'https://i.imgur.com/XnN2iVt.png' },
-  { name: 'heaven', minScore: 8, image: 'https://i.imgur.com/XnN2iVt.png' },
+  { name: '', minScore: 0, image: 'https://i.imgur.com/XnN2iVt.png' },
+  { name: '', minScore: 2, image: 'https://i.imgur.com/XnN2iVt.png' },
+  { name: '', minScore: 4, image: 'https://i.imgur.com/XnN2iVt.png' },
+  { name: '', minScore: 6, image: 'https://i.imgur.com/XnN2iVt.png' },
+  { name: '', minScore: 8, image: 'https://i.imgur.com/XnN2iVt.png' },
 ] as const;
 
 type BiomeName = 'winter' | 'spring' | 'summer' | 'newyork' | 'yellowstone';
