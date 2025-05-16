@@ -265,92 +265,10 @@ export const SettingsPopup: React.FC<SettingsPopupProps> = ({
           </div>
 
           {/* Notifications */}
-          <div>
-            <label className="block text-sm font-medium text-space-text-light mb-2">
-              Game Notifications
-            </label>
-            <div className="flex items-center space-x-4">
-              <button 
-                onClick={() => handleNotificationsChange('enable')}
-                className={`flex-1 py-2 px-4 rounded-lg border border-space-accent/20 text-space-text-light transition-colors ${
-                  notifications === 'enable' ? 'bg-space-accent' : 'bg-space-dark/80 hover:bg-space-dark/90'
-                }`}
-              >
-                Enable
-              </button>
-              <button 
-                onClick={() => handleNotificationsChange('disable')}
-                className={`flex-1 py-2 px-4 rounded-lg border border-space-accent/20 text-space-text-light transition-colors ${
-                  notifications === 'disable' ? 'bg-space-accent' : 'bg-space-dark/80 hover:bg-space-dark/90'
-                }`}
-              >
-                Disable
-              </button>
-            </div>
-          </div>
+          
 
           {/* Controls */}
-          <div>
-            <label className="block text-sm font-medium text-space-text-light mb-2">
-              Controls
-            </label>
-            <div className="flex items-center space-x-4">
-              {controls.map((control) => (
-                <div key={control} className="relative group">
-                  {control !== 'click' && (
-                    <button 
-                      onClick={() => handleRemoveControl(control)}
-                      className="absolute -top-2 -right-2 w-4 h-4 rounded-full bg-red-500 text-white text-xs flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
-                    >
-                      ×
-                    </button>
-                  )}
-                  <button 
-                    onClick={() => setActiveControl(control)}
-                    className={`flex-1 py-2 px-4 rounded-lg border border-space-accent/20 text-space-text-light transition-colors ${
-                      activeControl === control ? 'bg-space-accent' : 'bg-space-dark/80 hover:bg-space-dark/90'
-                    }`}
-                  >
-                    {control === 'space' ? 'Space' : control === 'arrow' ? 'Arrow Up' : 'Click'}
-                  </button>
-                </div>
-              ))}
-              {controls.length < 3 && (
-                <button 
-                  onClick={handleAddControl}
-                  className="flex-1 py-2 px-4 rounded-lg border border-space-accent/20 text-space-text-light bg-space-dark/80 hover:bg-space-dark/90 transition-colors"
-                >
-                  +
-                </button>
-              )}
-            </div>
-            {showAddControl && (
-              <div className="mt-4 flex items-center space-x-4">
-                <button 
-                  onClick={() => {
-                    handleControlChange('space');
-                    setShowAddControl(false);
-                  }}
-                  className={`flex-1 py-2 px-4 rounded-lg border border-space-accent/20 text-space-text-light transition-colors ${
-                    controls.includes('space') ? 'bg-space-accent' : 'bg-space-dark/80 hover:bg-space-dark/90'
-                  }`}
-                >
-                  Space
-                </button>
-                <button 
-                  onClick={() => {
-                    handleControlChange('arrow');
-                    setShowAddControl(false);
-                  }}
-                  className={`flex-1 py-2 px-4 rounded-lg border border-space-accent/20 text-space-text-light transition-colors ${
-                    controls.includes('arrow') ? 'bg-space-accent' : 'bg-space-dark/80 hover:bg-space-dark/90'
-                  }`}
-                >
-                  Arrow Up
-                </button>
-              </div>
-            )}
-          </div>
+          
 
           {/* Compte X (Twitter) */}
           <div>
