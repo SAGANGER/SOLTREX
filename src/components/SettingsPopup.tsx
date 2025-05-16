@@ -271,20 +271,7 @@ export const SettingsPopup: React.FC<SettingsPopupProps> = ({
           
 
           {/* Compte X (Twitter) */}
-          <div>
-            <label className="block text-sm font-medium text-space-text-light mb-2">Compte X (Twitter)</label>
-            {isXLinked ? (
-              <button className="flex items-center px-4 py-2 rounded-lg bg-green-600 text-white font-bold cursor-default" disabled>
-                <span className="mr-2">X linked</span>
-                {/* Icône X ou check */}
-                <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20"><path d="M17.53 2.47a.75.75 0 0 0-1.06 0L10 8.94 3.53 2.47A.75.75 0 1 0 2.47 3.53L8.94 10l-6.47 6.47a.75.75 0 1 0 1.06 1.06L10 11.06l6.47 6.47a.75.75 0 0 0 1.06-1.06L11.06 10l6.47-6.47a.75.75 0 0 0 0-1.06z"/></svg>
-              </button>
-            ) : (
-              <button onClick={handleLinkX} className="px-4 py-2 rounded-lg bg-blue-600 text-white font-bold hover:bg-blue-700 transition-colors">
-                Link X
-              </button>
-            )}
-          </div>
+          
         </div>
       </div>
     </div>
