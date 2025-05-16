@@ -132,7 +132,7 @@ export const UsernamePopup: React.FC<UsernamePopupProps> = ({
           <button
             type="submit"
             disabled={isLoading || !newUsername.trim()}
-            className="w-full flex justify-center items-center py-2 px-4 rounded-lg text-white bg-space-accent hover:bg-space-accent/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-space-accent disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200"
+            className="w-full flex justify-center items-center py-2 px-4 rounded-lg text-black bg-space-accent hover:bg-space-accent/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-space-accent disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200"
           >
             {isLoading ? 'Updating...' : 'Update Username'}
           </button>
