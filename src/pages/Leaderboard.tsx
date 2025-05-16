@@ -135,13 +135,13 @@ export const Leaderboard: React.FC = () => {
                 <span className="text-sm sm:text-base text-space-text-light">{currentUserProfile.username}</span>
               </div>
               
-              <button
-                onClick={() => setIsAffiliationOpen(true)}
-                className="flex items-center space-x-1 sm:space-x-2 py-1.5 sm:py-2 px-2 sm:px-4 rounded-lg text-white bg-space-accent hover:bg-space-accent/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-space-accent transition-all duration-200"
-              >
-                <Users className="h-4 w-4 sm:h-5 sm:w-5" />
-                <span className="hidden sm:inline">Open Affiliation Program</span>
-              </button>
+             <button
+            onClick={onOpenAffiliation}
+            className="flex items-center space-x-2 py-2 px-4 rounded-lg text-black bg-space-accent hover:bg-space-accent/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-space-accent transition-all duration-200"
+          >
+            <Users className="h-5 w-5" />
+            <span>Open Affiliation Program</span>
+          </button>
 
               <button
                 onClick={handleDisconnect}
