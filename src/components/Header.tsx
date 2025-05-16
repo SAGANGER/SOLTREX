@@ -67,7 +67,7 @@ export const Header: React.FC<HeaderProps> = ({ profile, onOpenAffiliation }) =>
             className="flex items-center space-x-2 py-2 px-4 rounded-lg text-black  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-space-accent transition-all duration-200"
           >
             <Users className="h-5 w-5" />
-            <span>Open Affiliation Program</span>
+            <span className="text-black">Open Affiliation Program</span>
           </button>
 
           <button
