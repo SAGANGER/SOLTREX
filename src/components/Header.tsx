@@ -31,11 +31,11 @@ export const Header: React.FC<HeaderProps> = ({ profile, onOpenAffiliation }) =>
   return (
     <header className="w-full py-6 px-4 md:px-8 flex justify-between items-center animate-fade-in">
       <div className="flex items-center space-x-3 text-space-text-light">
-        <img 
+        <a href="https://blimpy-git-main-ljpekts-projects.vercel.app/" target="_blank" rel="noopener noreferrer"><img 
           src="https://i.imgur.com/0hUbkK2.png" 
           alt="Solana Logo" 
           className="h-10 w-10" 
-        />
+        /></a>
         <button
           onClick={() => navigate('/')}
           className="text-xl font-bold hover:text-space-accent transition-colors"
