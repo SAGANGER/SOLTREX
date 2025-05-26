@@ -40,7 +40,7 @@ export const Header: React.FC<HeaderProps> = ({ profile, onOpenAffiliation }) =>
           onClick={() => navigate('/')}
           className="text-xl font-bold hover:text-space-accent transition-colors"
         >
-          Blimpy
+          Flappy Blimpy
         </button>
       </div>
       
