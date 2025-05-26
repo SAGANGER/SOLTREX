@@ -122,7 +122,7 @@ export const WalletConnect: React.FC = () => {
       ) : (
         <div className="w-full space-y-6">
           <p className="text-center text-space-text opacity-80 mb-4">
-            Connect with Phantom or Solflare to access your Solana wallet
+            Connect with Phantom or Solflare to access to Flappy Blimpy
           </p>
           
           <button
